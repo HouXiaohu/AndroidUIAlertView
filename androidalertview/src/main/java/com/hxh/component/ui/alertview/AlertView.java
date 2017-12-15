@@ -112,7 +112,13 @@ public class AlertView {
         if (confirm != null) {
             this.others = null;
             if (style == Style.Alert && mDatas.size() < HORIZONTAL_BUTTONS_MAXCOUNT) {
-                this.mDatas.add(1, confirm);
+                if(this.mDatas.size()==0)
+                {
+                    this.mDatas.add(0, confirm);
+                }else
+                {
+                    this.mDatas.add(1, confirm);
+                }
             }
         }
 
